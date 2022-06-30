@@ -23,7 +23,11 @@ const Comments = () => {
   return (
     <div className="card-comments">
       <form onSubmit={handleSubmitForm} className="comments-item-create">
-        <input type="text" onChange={handleChangeText} />
+        <input
+          type="text"
+          onChange={handleChangeText}
+          placeholder="Введите коммент"
+        />
         <input type="submit" hidden />
       </form>
       {!!comments.length &&
