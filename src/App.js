@@ -5,6 +5,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { rootReducer } from "./redux/reducers/rootReducer";
 import Title from "./title/title";
+import Comments from "./comments/comments";
 
 const store = createStore(rootReducer);
 
@@ -18,8 +19,8 @@ function App() {
               <img src="./sea.jpg" alt="surfing" />
               <Title />
               <Likes />
-              hello
             </div>
+            <Comments />
           </div>
         </div>
       </div>
