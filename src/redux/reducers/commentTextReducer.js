@@ -1,4 +1,9 @@
-import { TEXT_COMMENT, TEXT_UPDATE, TEXT_DELETE } from "../actions/actions";
+import {
+  TEXT_COMMENT,
+  TEXT_UPDATE,
+  TEXT_DELETE,
+  COMMENTS_LOAD
+} from "../actions/actions";
 
 const initialState = {
   comments: []
@@ -40,6 +45,18 @@ export const commentTextReducer = (state = initialState, action) => {
           comments: nextComments
         };
       })();
+    case COMMENTS_LOAD:
+      const commentsNew = action.data.map((item) => {
+        return {
+          text: item.name,
+          id: item.id
+        };
+      });
+      return {
+        ...state,
+        comments: commentsNew
+      };
+
     default:
       return state;
   }

@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { rootReducer } from "./redux/reducers/rootReducer";
 import Title from "./title/title";
 import Comments from "./comments/comments";
+import Spin from "./loader/loader";
 
 const store = createStore(
   rootReducer,
@@ -20,6 +21,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <div className="wrap">
+          <Spin />
           <div className="card">
             <div className="card-image">
               <img src="./sea.jpg" alt="surfing" />
