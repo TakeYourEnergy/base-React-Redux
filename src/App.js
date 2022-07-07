@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Likes from "./likes/likes";
 import thunk from "redux-thunk";
 import { createStore, compose, applyMiddleware } from "redux";

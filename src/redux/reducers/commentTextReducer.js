@@ -6,7 +6,8 @@ import {
 } from "../actions/actions";
 
 const initialState = {
-  comments: []
+  comments: [],
+  spinner: true
 };
 
 export const commentTextReducer = (state = initialState, action) => {
@@ -54,7 +55,8 @@ export const commentTextReducer = (state = initialState, action) => {
       });
       return {
         ...state,
-        comments: commentsNew
+        comments: commentsNew,
+        spinner: false
       };
 
     default:

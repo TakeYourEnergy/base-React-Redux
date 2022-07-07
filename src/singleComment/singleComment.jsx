@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { TEXT_UPDATE, TEXT_DELETE } from "../redux/actions/actions";
 
 const SingleComment = ({ data }) => {
   const [textComment, setTextComment] = useState("");
 
-  //const state = useSelector((state) => console.log(state));
   const dispatch = useDispatch();
 
   useEffect(() => {
